@@ -5,9 +5,10 @@
 # sudo docker run -d -p 6379:6379 -v <data-dir>:/data --name redis andresvidal/armv7-redis
 
 # Pull base image.
-FROM armv7/armhf-debian:jessie
+#FROM armv7/armhf-debian:jessie
+FROM armhf/debian:jessie
 
-MAINTAINER Théo Segonds
+MAINTAINER Andres Vidal
 
 # Setup Image
 # RUN apt-get update && apt-get install -y wget build-essential && rm -rf /var/lib/apt/lists/*
