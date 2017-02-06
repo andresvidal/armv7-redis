@@ -7,9 +7,13 @@
 # Pull base image.
 FROM armv7/armhf-debian:jessie
 
+MAINTAINER Théo Segonds
+
 # Setup Image
-#RUN apt-get update && apt-get install -y wget build-essential && rm -rf /var/lib/apt/lists/*
-RUN apt-get update && apt-get install -y wget build-essential
+# RUN apt-get update && apt-get install -y wget build-essential && rm -rf /var/lib/apt/lists/*
+RUN apt-get update --fix-missing && apt-get install -y --no-install-recommends \
+    wget \
+    build-essential
 
 # Install Redis.
 RUN \
